@@ -1,0 +1,271 @@
+2025-08-12T08:10:50.7337237-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T08:10:50.7388950-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T08:10:50.7693446-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T08:10:50.7779125-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T08:10:50.7806149-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T08:11:06.8252498-05:00 0HNEPK6KLUSO3:00000001 [ERR] Failed executing DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"" (627a98df)
+2025-08-12T08:11:06.9150274-05:00 0HNEPK6KLUSO3:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"Data.Contexts.Context"'."
+""Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Movies'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()" (f5c7ac34)
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Movies'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Data.Implementations.MovieRepository.ListMovie() in C:\GIT\MovieApi\Data\Implementations\MovieRepository.cs:line 23
+2025-08-12T08:11:07.3252491-05:00 0HNEPK6KLUSO3:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Movies'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Data.Implementations.MovieRepository.ListMovie() in C:\GIT\MovieApi\Data\Implementations\MovieRepository.cs:line 23
+   at Application.Implementations.MovieService.ListMovie() in C:\GIT\MovieApi\Application\Implementations\MovieService.cs:line 22
+   at MovieApi.Controllers.MovieController.GetAll() in C:\GIT\MovieApi\MovieApi\Controllers\MovieController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-12T08:30:49.0138564-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T08:30:49.0191330-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T08:30:49.0324057-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T08:30:49.0351915-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T08:30:49.0372426-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T08:31:20.5792091-05:00 0HNEPKHPMMERO:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"" (0723d8ff)
+2025-08-12T08:38:04.1941271-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T08:38:04.1988005-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T08:38:04.2137268-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T08:38:04.2163328-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T08:38:04.2180943-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T08:51:00.3461349-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T08:51:00.3510434-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T08:51:00.3627102-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T08:51:00.3659247-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T08:51:00.3693626-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T08:53:23.2107694-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T08:53:23.2157343-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T08:53:23.2286030-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T08:53:23.2318770-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T08:53:23.2340799-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T08:53:28.4594543-05:00 0HNEPKUDA2IJO:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"" (0723d8ff)
+2025-08-12T09:21:16.2693056-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T09:21:16.2745184-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T09:21:16.2858001-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T09:21:16.2926654-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T09:21:16.2950517-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T09:21:34.5096124-05:00 0HNEPLDVV18K7:00000009 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2025-08-12T09:23:06.8354180-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T09:23:06.8392123-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T09:23:06.8507388-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T09:23:06.8531140-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T09:23:06.8546045-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T09:23:36.3267983-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T09:23:36.3318732-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T09:23:36.3424305-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T09:23:36.3482408-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T09:23:36.3500614-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T09:23:55.9218014-05:00 0HNEPLF9KUDC6:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2025-08-12T09:24:02.0550216-05:00 0HNEPLF9KUDC6:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2025-08-12T09:41:34.5134929-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T09:41:34.5181114-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T09:41:34.5593119-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T09:41:34.5626031-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T09:41:34.5652651-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T09:41:38.4868374-05:00 0HNEPLPAVO1M7:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/movies" for actions - MovieApi.Controllers.MovieController.GetById (MovieApi),MovieApi.Controllers.MovieController.GetMoviesOrderedById (MovieApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-12T09:43:04.2546971-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T09:43:04.2593926-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T09:43:04.2711414-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T09:43:04.2734110-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T09:43:04.2748457-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T09:43:26.8537525-05:00 0HNEPLQ5NH5KK:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T09:44:19.9203887-05:00 0HNEPLQ5NH5KK:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\"
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T09:44:31.9728159-05:00 0HNEPLQ5NH5KK:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\" DESC
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T09:44:39.4535072-05:00 0HNEPLQ5NH5KK:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\" DESC
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T10:02:09.5245913-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T10:02:09.5362491-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T10:02:09.5564653-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T10:02:09.5632691-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T10:02:09.5717507-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T10:04:44.1259755-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T10:04:44.1314301-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T10:04:44.1507128-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T10:04:44.1537549-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T10:04:44.1568866-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:33:55.6022656-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T12:33:55.6067199-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T12:33:55.6133872-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:33:55.6211698-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:33:55.6226457-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:34:25.6369581-05:00 0HNEPOPKV05VB:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T12:38:47.8177845-05:00  [INF] Now listening on: "https://localhost:8080" (d826f4b8)
+2025-08-12T12:38:47.8268111-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:38:47.8349203-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:38:47.8365795-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:39:22.6884159-05:00 0HNEPOSM5JPBB:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T12:41:07.3792584-05:00  [INF] Now listening on: "https://localhost:8080" (d826f4b8)
+2025-08-12T12:41:07.3940911-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:41:07.3971720-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:41:07.3990025-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:43:57.1779879-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T12:43:57.1820634-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T12:43:57.1883507-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:43:57.1959909-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:43:57.1975197-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:44:24.9872664-05:00  [INF] Now listening on: "https://localhost:8080" (d826f4b8)
+2025-08-12T12:44:24.9961978-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:44:25.0043839-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:44:25.0060078-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:46:02.1898217-05:00  [INF] Now listening on: "https://localhost:7292" (d826f4b8)
+2025-08-12T12:46:02.1940544-05:00  [INF] Now listening on: "http://localhost:5282" (d826f4b8)
+2025-08-12T12:46:02.2068897-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:46:02.2092915-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:46:02.2107456-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:47:10.2621484-05:00  [INF] Now listening on: "https://localhost:8080" (d826f4b8)
+2025-08-12T12:47:10.2708484-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:47:10.2796742-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:47:10.2811197-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:47:35.1647816-05:00 0HNEPP15H0FF1:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T12:47:38.8364170-05:00 0HNEPP15H0FF1:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T12:48:11.4676127-05:00 0HNEPP15H0FF1:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\" DESC
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T12:48:17.0852748-05:00 0HNEPP15H0FF1:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\"
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T12:55:29.4305847-05:00  [INF] Now listening on: "https://localhost:8080" (d826f4b8)
+2025-08-12T12:55:29.4392910-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T12:55:29.4480878-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T12:55:29.4499190-05:00  [INF] Content root path: "C:\GIT\MovieApi\MovieApi" (cc26f24e)
+2025-08-12T12:56:15.5349266-05:00 0HNEPP5NUVKS0:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (Size = 5), @p3='?' (DbType = Int32), @p4='?' (Size = 12), @p5='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Movies\" (\"id\", \"film\", \"genre\", \"score\", \"studio\", \"year\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2025-08-12T12:56:27.4992609-05:00 0HNEPP5NUVKS0:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T14:29:27.8285481-05:00  [INF] Now listening on: "https://localhost:8080" (d826f4b8)
+2025-08-12T14:29:27.8521885-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-08-12T14:29:27.8793804-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-08-12T14:29:27.8875644-05:00  [INF] Content root path: "C:\GIT\movie-api\MovieApi" (cc26f24e)
+2025-08-12T14:29:50.6827063-05:00 0HNEPQQDCBND3:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_Value_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+WHERE \"m\".\"id\" = @__id_Value_0
+LIMIT 1" (0723d8ff)
+2025-08-12T14:29:58.4686381-05:00 0HNEPQQDCBND3:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\"
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T14:30:04.7604231-05:00 0HNEPQQDCBND3:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\" DESC
+LIMIT @__p_0" (0723d8ff)
+2025-08-12T14:30:13.6471289-05:00 0HNEPQQDCBND3:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"m\".\"id\", \"m\".\"film\", \"m\".\"genre\", \"m\".\"score\", \"m\".\"studio\", \"m\".\"year\"
+FROM \"Movies\" AS \"m\"
+ORDER BY \"m\".\"id\" DESC
+LIMIT @__p_0" (0723d8ff)
